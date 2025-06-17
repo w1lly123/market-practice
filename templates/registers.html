@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>會員註冊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>註冊會員</h2>
+        <form action="/signup" method="POST">
+            <input type="text" name="nickname" placeholder="暱稱" required>
+            <input type="email" name="email" placeholder="電子信箱" required>
+            <input type="password" name="password" placeholder="密碼" required>
+            
+            <!-- 若整合 Google reCAPTCHA -->
+            <!-- <div class="g-recaptcha" data-sitekey="你的-site-key"></div> -->
+            
+            <button type="submit">註冊</button>
+        </form>
+        <div class="back-link">
+            已有帳號？<a href="/login">登入</a>
+        </div>
+    </div>
+
+    <!-- 若整合 Google reCAPTCHA -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</body>
+</html>
